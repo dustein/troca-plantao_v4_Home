@@ -2,3 +2,9 @@ npm init -y
 npm i -D typescript
 npm i express
 npm i @types/express
+(https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/mongodb-typescript-mongodb)
+npm i -D prisma
+npm i @types/node
+npx prisma
+nps prisma init
+
