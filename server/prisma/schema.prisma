@@ -15,8 +15,6 @@ model User {
   email     String   @unique
   nome      String
   matricula Int
-  createdAt DateTime @default(now())
-  editedAt  DateTime @default(now())
   Oferta    Oferta[]
 }
 
@@ -24,10 +22,7 @@ model Oferta {
   id        String   @id @default(uuid()) @map("_id") @db.ObjectId
   data      DateTime
   turno     Boolean
-  propoe    User     @relation(fields: [propoeId], references: [id])
-  propoeId  String   @db.ObjectId
-  aceita    User     @relation(fields: [aceitaId], references: [id])
-  aceitaId  String   @db.ObjectId
-  createdAt DateTime @default(now())
-  editedAt  DateTime @default(now())
+  propos    User     @relation(fields: [proposId], references: [id])
+  proposId  String   @db.ObjectId
+  aceitouId String
 }
