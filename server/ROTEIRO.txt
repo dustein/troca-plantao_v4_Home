@@ -6,6 +6,7 @@ npm install @types/express
 npm install -D prisma
 npm install @types/node
 npx prisma
+npm install uuid
 nps prisma init
 npm install @prisma/client
-
+npx prisma generate

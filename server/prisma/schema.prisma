@@ -11,15 +11,17 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid()) @map("_id") @db.ObjectId
-  email     String   @unique
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  ref       String @default(uuid())
+  email     String @unique
   nome      String
-  matricula Int
-  Oferta    Oferta[]
+  matricula Int    @unique
+  Oferta    Job[]
 }
 
-model Oferta {
-  id        String   @id @default(uuid()) @map("_id") @db.ObjectId
+model Job {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  ref       String   @default(uuid())
   data      DateTime
   turno     Boolean
   propos    User     @relation(fields: [proposId], references: [id])
