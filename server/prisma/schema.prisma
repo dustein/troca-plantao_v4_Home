@@ -11,20 +11,18 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  ref       String   @default(uuid())
-  email     String   @unique
-  nome      String
-  matricula Int      @unique
-  Oferta    Job[]
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  ref       String @default(uuid())
+  email     String
+  name      String
+  matricula Int
 }
 
 model Job {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  ref       String   @default(uuid())
-  dia       String
-  turno     Boolean
-  propos    User     @relation(fields: [proposId], references: [id])
-  proposId  String   @db.ObjectId
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  ref       String @default(uuid())
+  date      String
+  turno     String
+  criouId   String
   aceitouId String
 }

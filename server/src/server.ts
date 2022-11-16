@@ -1,5 +1,5 @@
 import express from 'express';
-import {PrismaClient} from '@prisma/client';
+import {Prisma, PrismaClient} from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -14,34 +14,39 @@ app.get('/users', async (req, res) => {
   await prisma.$connect()
   const users = await prisma.user.findMany();
 
-  res.status(200).json({cadastrados: users})
+  res.status(200).json({ users })
 })
 
 app.post('/users', async (req, res) => {
   await prisma.$connect()
-  const { email, nome, matricula } = req.body;
+  const { email, name, matricula } = req.body;
   await prisma.user.create({
     data: {
       email,
-      nome,
+      name,
       matricula,
     }
   })
 
-  res.status(201).json({message: 'user created'})
+  res.status(201).json({ message: "user created."})
 })
 
 app.post('/jobs', async (req, res) => {
   await prisma.$connect()
-  const { dia, turno, propos } = req.body;
-  await prisma.oferta.create({
-    data: {
-      propos
+  const { date, turno, criouId, aceitouId } = req.body;
+  let newJob: Prisma.JobCreateInput;
 
-    }
+  newJob = {
+    date,
+    turno,
+    criouId,
+    aceitouId
+  }
+  await prisma.job.create({
+    data: newJob
   })
 
-  res.status(201).json({message: 'job created'})
+  res.status(201).json({ newJob })
 })
 
 app.listen(3030, () => { console.log('Servidor ATIVADO!')});
