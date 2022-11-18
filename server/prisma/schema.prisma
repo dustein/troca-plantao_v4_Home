@@ -12,15 +12,15 @@ datasource db {
 
 model User {
   id        String @id @default(auto()) @map("_id") @db.ObjectId
-  ref       String @default(uuid())
-  email     String
+  ref       String @unique @default(uuid())
+  email     String @unique
   name      String
   matricula Int
 }
 
 model Job {
   id        String @id @default(auto()) @map("_id") @db.ObjectId
-  ref       String @default(uuid())
+  ref       String @unique @default(uuid())
   date      String
   turno     String
   criouId   String

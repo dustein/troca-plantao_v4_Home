@@ -82,19 +82,18 @@ app.post('/jobs', async (req, res) => {
 
 //aceita um job
 app.patch('/aceptjob', async (req, res) => {
-  const selectedJob = req.body
+  const selectedJob = req.body.selectedJob
+  const aceitouRefTemporario = req.body.aceitouRefTemporario
   await prisma.$connect()
   await prisma.job.update({
     where: {
-      id: {
-      
-      }
+      ref: selectedJob,
     },
     data: {
-      aceitouId: "aceito"
+      aceitouId: aceitouRefTemporario,
     }
   })
-
+  res.send("job aceito")
 })
 
 app.listen(3030, () => { console.log('Servidor ATIVADO!')});
