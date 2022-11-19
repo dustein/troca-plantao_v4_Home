@@ -86,14 +86,17 @@ app.patch('/aceptjob', async (req, res) => {
   const aceitouRefTemporario = req.body.aceitouRefTemporario
   await prisma.$connect()
   await prisma.job.update({
-    where: {
-      ref: selectedJob,
-    },
-    data: {
-      aceitouId: aceitouRefTemporario,
-    }
+    where: { ref: selectedJob },
+    data: { aceitouId: aceitouRefTemporario }
   })
-  res.send("job aceito")
+
+  const userAccepted = await prisma.user.findUnique({
+    where: { ref: aceitouRefTemporario },
+    select: { name: true, matricula: true }
+  })
+
+
+  res.json( { Aceitou: userAccepted })
 })
 
 app.listen(3030, () => { console.log('Servidor ATIVADO!')});
