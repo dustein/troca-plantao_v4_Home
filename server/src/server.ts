@@ -83,13 +83,14 @@ app.post('/jobs', async (req, res) => {
 //aceita um job
 app.patch('/aceptjob', async (req, res) => {
   const selectedJob = req.body.selectedJob
-  const aceitouRefTemporario = req.body.aceitouRefTemporario
+  const aceitouRefTemporario = req.body.aceitouRefTemporario;
   await prisma.$connect()
+  // User aceita o ref.Job, é gravado o ref.User dele
   await prisma.job.update({
     where: { ref: selectedJob },
     data: { aceitouId: aceitouRefTemporario }
   })
-
+  // retorna o nome e matrícula do user que aceitou
   const userAccepted = await prisma.user.findUnique({
     where: { ref: aceitouRefTemporario },
     select: { name: true, matricula: true }

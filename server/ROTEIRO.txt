@@ -1,13 +1,16 @@
-npm init -y
-npm install -D typescript
-npm install express
-npm install @types/express
-(https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/mongodb-typescript-mongodb)
-npm install -D prisma
-npm install @types/node
-npx prisma
-npm install uuid
-npx prisma db push (para alteracoes)
-nps prisma init
-npm install @prisma/client
-npx prisma generate
+- npm init -y
+- npm install -D typescript
+- npm install express
+- npm install @types/express
+- npm install -D prisma
+- npm install @types/node
+- npx prisma
+- npm install uuid
+- npx prisma db push (para alteracoes)
+- nps prisma init
+- npm install @prisma/client
+- npx prisma generate
+
+== Front
+== na raiz: npm create vite@latest
+
