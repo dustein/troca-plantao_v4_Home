@@ -1,4 +1,5 @@
 import './styles/main.css'
+import * as Select from '@radix-ui/react-select';
 
 function App() {
 
@@ -26,15 +27,40 @@ function App() {
         <input className='px-2 py-1 border-2 rounded-lg border-cyan-800 ' type="text" placeholder="Nome para Cadastrar" name="uname" required></input>
         </p>
         <p>
-        <div>
+          <div className=''>
               <input className='' type="radio" value="none" id="radio_1" name="plantao"/>
-              <label>SAP I</label>
+              <label className=''>SAP I</label>
+              
             </div>
         </p>
         
           
         </form>
       </div>
+
+      <div>
+      <Select.Root>
+
+        <Select.Trigger>
+          <Select.Value>Selecione o Plantão</Select.Value>
+          <Select.Icon></Select.Icon>
+        </Select.Trigger>
+      
+        <Select.Portal>
+          <Select.Content className='bg-black/20 rounded-lg shadow-md'>
+            <Select.ScrollUpButton></Select.ScrollUpButton>
+            <Select.Viewport className='p-4'>
+              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 1">SAP 1</Select.Item>
+              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 2">SAP 2</Select.Item>
+              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 3">SAP 3</Select.Item>
+              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 4">SAP 4</Select.Item>
+            </Select.Viewport>
+          </Select.Content>
+        </Select.Portal>
+
+      </Select.Root>
+      </div>
+
 
     </div>
   )
