@@ -38,7 +38,6 @@ function App() {
         </form>
       </div>
 
-      <div>
       <Select.Root>
 
         <Select.Trigger>
@@ -47,10 +46,10 @@ function App() {
         </Select.Trigger>
       
         <Select.Portal>
-          <Select.Content className='bg-black/20 rounded-lg shadow-md'>
+          <Select.Content className='bg-black/20 rounded-lg shadow-md border border-cyan-600 relative top-1/2 left-1/2 flex items-center justify-items-center'>
             <Select.ScrollUpButton></Select.ScrollUpButton>
-            <Select.Viewport className='p-4'>
-              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 1">SAP 1</Select.Item>
+            <Select.Viewport className='p-14'>
+              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 flex relative' value="SAP 1">SAP 1</Select.Item>
               <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 2">SAP 2</Select.Item>
               <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 3">SAP 3</Select.Item>
               <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 4">SAP 4</Select.Item>
@@ -59,10 +58,15 @@ function App() {
         </Select.Portal>
 
       </Select.Root>
+
+      <div id="teste">
+        
       </div>
 
-
     </div>
+
+
+    
   )
 }
 
