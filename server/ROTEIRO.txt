@@ -13,4 +13,10 @@
 
 == Front
 == na raiz: npm create vite@latest
+== instalar TailwindCSS com PostCSS (vide documentação):
+== npm install -D tailwindcss postcss autoprefixer
+== npx tailwindcss init -p (flag -p para integração com o Vite)
+== Fazer as configurações que a documentação orienta
+== npm install @radix-ui/react-select
+
 
