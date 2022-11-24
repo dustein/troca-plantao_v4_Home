@@ -1,73 +1,46 @@
 import './styles/main.css'
-import * as Select from '@radix-ui/react-select';
+import * as Dialog from '@radix-ui/react-dialog';
 
 
 function App() {
 
   return (
-    <div className='bg-gray-400 h-44'>
-      <header>
-        <h1 className='bg-sky-900 text-gray-50 text-center font-bold text-4xl p-4'>Troca Plantão versao 4</h1>
-      </header>
+    <div className='flex justify-center gap-4 flex-col'>
+    <h1 className='flex justify-center'>Teste</h1>
 
-      <div id='formulario'>
-        <form action="" className='text-center py-5'>
-
-        <p>
-        <label className='text-lg '>Nome: </label>
-        <input className='px-2 py-1 border-2 rounded-lg border-cyan-800 ' type="text" placeholder="Nome para Cadastrar" name="uname" required></input>
-        </p>
-
-        <p>
-        <label className='text-lg '>E-mail: </label>
-        <input className='px-2 py-1 border-2 rounded-lg border-cyan-800 ' type="text" placeholder="Nome para Cadastrar" name="uname" required></input>
-        </p>
-
-        <p>
-        <label className='text-lg '>Matrícula: </label>
-        <input className='px-2 py-1 border-2 rounded-lg border-cyan-800 ' type="text" placeholder="Nome para Cadastrar" name="uname" required></input>
-        </p>
-        <p>
-          <div className=''>
-              <input className='' type="radio" value="none" id="radio_1" name="plantao"/>
-              <label className=''>SAP I</label>
-              
+    <Dialog.Root>
+      <Dialog.Trigger>
+        <button className='text-center flex items-center justify-center border w-min p-3 m-auto border-cyan-700'>MENU</button>
+      </Dialog.Trigger>
+      <Dialog.Portal>
+        <Dialog.Overlay className='bg-black/60 inset-0 fixed' />
+        <Dialog.Content className='fixed bg-slate-700 py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25'>
+          <Dialog.Title className='text-3xl font-black'>Cadastro de Operacional</Dialog.Title>
+          <Dialog.Description className='text-xl'>preencha seus dados</Dialog.Description>
+          <form className='mt-2'>
+            <div>
+              <label className='flex flex-col gap-2' htmlFor="username">Nome: </label>
+              <input id="username" placeholder='seu nome de guerra'/>
             </div>
-        </p>
-        
-          
-        </form>
-      </div>
-
-      <Select.Root>
-
-        <Select.Trigger className='flex items-center justify-center rounded py-0 px-4 text-lg h-8 gap-1.5 bg-green-700 text-red-600 shadow-2xl hover:bg-blue-400'>
-          <Select.Value>Selecione o Plantão</Select.Value>
-          <Select.Icon></Select.Icon>
-        </Select.Trigger>
-      
-        <Select.Portal>
-          <Select.Content className='overflow-hidden bg-black/20 rounded-lg shadow-md border border-cyan-600 relative top-1/2 left-1/2 flex items-center justify-items-center'>
-            <Select.ScrollUpButton></Select.ScrollUpButton>
-            <Select.Viewport className='p-14'>
-              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 flex relative' value="SAP 1">SAP 1</Select.Item>
-              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 2">SAP 2</Select.Item>
-              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 3">SAP 3</Select.Item>
-              <Select.Item className='text-xl leading-normal text-blue-700 rounded-lg h-6 p-4 relative' value="SAP 4">SAP 4</Select.Item>
-            </Select.Viewport>
-          </Select.Content>
-        </Select.Portal>
-
-      </Select.Root>
-
-      <div id="teste">
-        
-      </div>
-
-    </div>
-
-
+            <div>
+              <label htmlFor="usermail">E-mail: </label>
+              <input id="usermail" placeholder='seu email' className='bg-zinc-800 py-3 px-4 rounded text-sm placeholder:text-zinc-400'/>
+            </div>
+            <div>
+              <label htmlFor="matricula">Nome: </label>
+              <input id="matricula" type="number" placeholder='seu ID Funcional'/>
+            </div>
+            <div>
+              <label htmlFor="plantao">Plantão: </label>
+              <input id="userplantao" placeholder='seu plantão'/>
+            </div>
+          </form>
+          <Dialog.Close />
+      </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
     
+    </div>
   )
 }
 
