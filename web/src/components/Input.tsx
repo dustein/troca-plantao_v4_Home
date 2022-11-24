@@ -8,7 +8,7 @@ export function Input(props: InputProps) {
 
     <input
       {...props}
-      className='bg-zinc-800 py-3 px-4 rounded text-sm placeholder:text-zinc-400'/>  
+      className='bg-zinc-800 mt-2 py-2 px-2 rounded text-sm placeholder:text-zinc-400'/>  
 
   )
 
