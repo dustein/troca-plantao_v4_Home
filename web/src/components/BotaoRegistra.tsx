@@ -8,13 +8,13 @@ export function BotaoRegistra() {
     <div>
       <Dialog.Root>
         <Dialog.Trigger>
-          <button className='text-center flex items-center justify-center border w-min p-3 m-auto border-cyan-700'>Registrar</button>
+          <button className='text-center flex items-center justify-center border w-min p-3 m-auto border-zinc-500 text-gray-100 hover:bg-zinc-200 hover:text-gray-800'>Registrar</button>
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='bg-black/60 inset-0 fixed' />
           <Dialog.Content className='fixed bg-slate-700 py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25'>
-            <Dialog.Title className='text-3xl font-black'>Cadastro de Operacional</Dialog.Title>
-            <Dialog.Description className='text-xl'>preencha seus dados</Dialog.Description>
+            <Dialog.Title className='text-2xl font-black'>Cadastro de Operacional</Dialog.Title>
+            <Dialog.Description className='text-lg'>preencha seus dados</Dialog.Description>
             <form className='mt-6 flex flex-col gap-2'>
               <div>
                 <label className='flex flex-col gap-2' htmlFor="username">Nome</label>
