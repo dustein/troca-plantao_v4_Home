@@ -3,6 +3,8 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { Input } from './components/Input';
 import { CheckCircle, XCircle } from 'phosphor-react'
 import { BotaoRegistra } from './components/BotaoRegistra';
+import { BotaoLogin } from './components/BotaoLogin';
+
 
 function App() {
 
@@ -14,11 +16,11 @@ function App() {
       </header>
 
       <div className='flex justify-center border'>
-        <h1>Login</h1>
+        <BotaoRegistra />
       </div>
    
       <div className='flex justify-center border'>
-        <BotaoRegistra />
+        <BotaoLogin />
       </div>
       
     

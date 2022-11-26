@@ -30,7 +30,7 @@ export function BotaoRegistra() {
               </div>
 
               <div className='flex flex-col  gap-2  justify-evenly'>
-                <label className='flex justify-center' htmlFor="plantao">Plantão</label>
+                <label className='flex justify-center pt-4' htmlFor="plantao">Plantão</label>
                 <div className='flex justify-evenly gap-3'>
                   <button title="Plantão 01" className='w-10 h-10 rounded hover:text-white hover:border bg-zinc-800 text-zinc-400'>I</button>
                   <button title="Plantão 02" className='w-10 h-10 rounded hover:text-white hover:border bg-zinc-800 text-zinc-400'>II</button>
