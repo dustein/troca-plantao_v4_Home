@@ -8,13 +8,13 @@ export function BotaoLogin() {
     <div>
       <Dialog.Root>
         <Dialog.Trigger>
-          <button className='text-center flex items-center justify-center border w-min p-3 m-auto border-zinc-500 text-gray-100 hover:bg-zinc-200 hover:text-gray-800'>Login</button>
+          <button className='text-center flex items-center justify-center border  p-3 m-auto border-zinc-500 text-gray-100 hover:bg-zinc-200 hover:text-gray-800'>Login</button>
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='bg-black/60 inset-0 fixed' />
-          <Dialog.Content className='fixed bg-slate-700 py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25'>
-            <Dialog.Title className='text-3xl font-black'>Login - Usuários Cadastrados</Dialog.Title>
-            <Dialog.Description className='text-xl'>informe seus dados cadastrados</Dialog.Description>
+          <Dialog.Content className='fixed bg-slate-700 py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg shadow-black/25'>
+            <Dialog.Title className='text-xl font-black text-center'>Login</Dialog.Title>
+
             <form className='mt-6 flex flex-col gap-2'>
               
               <div>

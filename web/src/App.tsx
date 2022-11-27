@@ -23,13 +23,7 @@ function App() {
       <div className='flex justify-center'>
         <BotaoLogin />
       </div>
-      <div>
-        <BotaoNavega nome="Teste"/>
-        <BotaoNavega nome="Outro"/>
 
-        <BotaoNavega nome="Entendi"/>
-
-      </div>
       </div>
       
     

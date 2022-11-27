@@ -12,9 +12,9 @@ export function BotaoRegistra() {
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='bg-black/60 inset-0 fixed' />
-          <Dialog.Content className='fixed bg-slate-700 py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25'>
-            <Dialog.Title className='text-2xl font-black'>Cadastro de Operacional</Dialog.Title>
-            <Dialog.Description className='text-lg'>preencha seus dados</Dialog.Description>
+          <Dialog.Content className='fixed bg-slate-700 py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg h-screen shadow-lg shadow-black/25'>
+            <Dialog.Title className='text-xl font-black text-center'>Cadastro de Operacional</Dialog.Title>
+
             <form className='mt-6 flex flex-col gap-2'>
               <div>
                 <label className='flex flex-col gap-2' htmlFor="username">Nome</label>

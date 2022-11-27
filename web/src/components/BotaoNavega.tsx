@@ -5,7 +5,7 @@ interface BotaoProps {
 export function BotaoNavega(props: BotaoProps) {
    return (
       <>
-      <button>
+      <button className="border border-x-stone-700 bg-zinc-700 text-gray-300 w-auto p-2">
          {props.nome}
       </button>
       </>

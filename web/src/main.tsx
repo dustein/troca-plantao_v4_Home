@@ -9,6 +9,10 @@ import {
   Route,
 } from 'react-router-dom'
 import { ListaJobs } from './routes/ListaJobs'
+import { AcceptedJobs } from './routes/AcceptedJobs'
+import { AcceptedOffers } from './routes/AcceptedOffers'
+import { OfferJob } from './routes/OfferJob'
+import { LoggedNav } from './routes/LoggedNav'
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
 
 const router = createBrowserRouter([
@@ -18,9 +22,25 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: 'listajobs',
+    path: 'logged',
+    element: <LoggedNav />
+  },
+  {
+    path: '/logged/listajobs',
     element: <ListaJobs />
-  }
+  },
+  {
+    path: '/logged/acceptedjobs',
+    element: <AcceptedJobs />
+  },
+  {
+    path: '/logged/offerjob',
+    element: <OfferJob />
+  },
+  {
+    path: '/logged/acceptedoffers',
+    element: <AcceptedOffers />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
