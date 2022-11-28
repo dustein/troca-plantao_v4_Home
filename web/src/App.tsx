@@ -5,6 +5,7 @@ import { CheckCircle, XCircle } from 'phosphor-react'
 import { BotaoRegistra } from './components/BotaoRegistra';
 import { BotaoLogin } from './components/BotaoLogin';
 import { BotaoNavega } from './components/BotaoNavega';
+import { Header } from './components/Header';
 
 
 function App() {
@@ -12,9 +13,8 @@ function App() {
   return (
     <div className='flex flex-col bg-slate-400 h-screen shadow-lg shadow-black/25'>
 
-      <div className='flex justify-center border text-4xl font-extrabold bg-zinc-800 text-neutral-100'>
-        <h1>Plantão v4</h1>
-      </div>
+      <Header />
+
       <div id="comandos" className='flex flex-col gap-4 items-center justify-center h-screen bg-zinc-700'>
       <div className='flex justify-center'>
         <BotaoRegistra />

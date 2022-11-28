@@ -3,13 +3,13 @@ import { BotaoNavega } from "../components/BotaoNavega";
 
 export function LoggedNav() {
    return (
-      <div className="flex flex-col bg-slate-400 h-screen shadow-lg shadow-black/25">
+      <div className="flex flex-col bg-zinc-800 h-screen shadow-lg shadow-black/25 p-4">
 
          <div className='flex justify-center text-4xl font-extrabold bg-zinc-800 text-neutral-100'>
             <h1>Plantão v4</h1>
          </div>
 
-         <div className="flex flex-col items-center gap-2 justify-center pt-4">
+         <div className="flex flex-col items-center gap-2 justify-center pt-4 text-gray-200 text-lg">
             <h2>Balcao de Plantoes</h2>
             
             <Link to={'listajobs'}>

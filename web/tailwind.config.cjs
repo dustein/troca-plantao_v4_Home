@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var'],
       },
+      backgroundImage: {
+        'falcao': "url('core.png')",
+      }
     },
   },
   plugins: [],

@@ -1,6 +1,12 @@
+import { Header } from "../components/Header"
 
 export function OfferJob() {
    return (
-      <h1>Oferecer Plantoes</h1>
+      <div>
+         <Header />
+
+         <h1>Postar Serviço</h1>
+         <p></p>
+      </div>
    )
 }
