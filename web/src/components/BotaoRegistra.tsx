@@ -25,8 +25,8 @@ export function BotaoRegistra() {
                 <Input id="usermail" placeholder='e-mail'/>
               </div>
               <div>
-                <label className='flex flex-col gap-2 appearance-none' htmlFor="funcional">ID Funcional</label>
-                <Input id="funcional" type="number" placeholder='ID Funcional'/>
+                <label className='flex flex-col gap-2' htmlFor="funcional">ID Funcional</label>
+                <Input id="funcional" type="number" placeholder='ID Funcional' className='appearance-none'/>
               </div>
 
               <div className='flex flex-col  gap-2  justify-evenly'>
