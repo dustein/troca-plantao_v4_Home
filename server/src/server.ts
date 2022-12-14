@@ -12,6 +12,7 @@ app.get('/users', async (req, res) => {
   await prisma.$connect()
   const users = await prisma.user.findMany();
 
+  console.log('Atendida solicitação de listagem de usuários.')
   res.status(200).json({ users })
 })
 // lista todos jobs
@@ -19,6 +20,7 @@ app.get('/jobs', async (req, res) => {
   await prisma.$connect()
   const jobs = await prisma.job.findMany();
 
+  console.log('Atendida solicitação de listagem de jobs geral.')
   res.status(200).json({ jobs })
 })
 
@@ -30,6 +32,8 @@ app.get('/openjobs', async (req, res) => {
       aceitouId: ""
     }
   });
+
+  console.log('Atendida solicitação de listagem de jobs em aberto.')
   res.status(200).json({ openJobs })
 })
 
@@ -43,6 +47,8 @@ app.get('/closedjobs', async (req, res) => {
       }
     }
   });
+
+  console.log('Atendida solicitação de listagem de jobs fechados.')
   res.status(200).json({ openJobs })
 })
 
@@ -57,6 +63,8 @@ app.post('/users', async (req, res) => {
       matricula,
     }
   })
+
+  console.log('Atendida solicitação de criação de usuário.')
   res.status(201).json({ message: "user created."})
 })
 
@@ -77,6 +85,7 @@ app.post('/jobs', async (req, res) => {
     data: newJob
   })
 
+  console.log('Atendida solicitação de criação de job.')
   res.status(201).json({ newJob })
 })
 
@@ -97,7 +106,8 @@ app.patch('/aceptjob', async (req, res) => {
   })
 
 
+  console.log(`Atendido solicitação de aceite de job pelo user ${userAccepted?.name}`)
   res.json( { Aceitou: userAccepted })
 })
 
-app.listen(3030, () => { console.log('Servidor ATIVADO!')});
+app.listen(3030, () => { console.log('Servidor ATIVADO! Porta 3030')});
